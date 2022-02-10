@@ -6,10 +6,11 @@ conda env create -f environment.yaml
 conda activate miRNA-Seq
 ```
 
-**Download required fasta files from miRBase**
+**Download required fasta files from miRBase and unzip**
 ```
 wget https://www.mirbase.org/ftp/CURRENT/mature.fa.gz
 wget https://www.mirbase.org/ftp/CURRENT/hairpin.fa.gz
+gunzip *gz*
 ```
 
 **Create RAids.txt**
