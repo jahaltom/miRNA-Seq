@@ -58,6 +58,7 @@ rule Count_Table:
             # Get #miRNA  and precursor IDs from miRNAs_expressed_all_samples_{sample}.csv
             if x==0:                
                 countTable=quant_df[["#miRNA","precursor"]]
+                countTable = countTable.rename(columns={'#miRNA': 'miRNA'})
                 x=1
              # Extract counts then add to table.               
             countTable[raid]=quant_df[raid[-3:]]
