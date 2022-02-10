@@ -50,15 +50,18 @@ rule Count_Table:
         ["{wd}/{sample}/miRNAs_expressed_all_samples_{sample}.csv".format(wd=DIR,sample=s) for s in ra]
     output:
         "countTable.tsv"
-    run: 
-        
-        ##miRNA  and precursor IDs from miRNAs_expressed_all_samples_{sample}.csv
-        countTable=pd.read_csv("info",sep="\t")  
+    run:           
+        x=0
         for qf in input:
             raid=qf.split('/')[1] 
             path=DIR+"/"+raid + "/"        
-            #Read in miRNAs_expressed_all_samples_{sample}.csv and extract counts then add to table.
+            #Read in miRNAs_expressed_all_samples_{sample}.csv 
             quant_df=pd.read_csv(path+"miRNAs_expressed_all_samples_"+raid+".csv",sep="\t")  
+            # Get #miRNA  and precursor IDs from miRNAs_expressed_all_samples_{sample}.csv
+            if x=0:                
+                countTable=quant_df[["#miRNA","precursor"]]
+                x=1
+             # Extract counts then add to table.               
             countTable[raid]=quant_df[raid[-3:]]
         countTable.to_csv("countTable.tsv",mode="w", header=True,index=False,sep="\t")
         
