@@ -2,9 +2,7 @@ from pyrpipe import sra,qc
 import glob
 import pandas as pd
 
-#Get data
-#wget https://www.mirbase.org/ftp/CURRENT/mature.fa.gz
-#wget https://www.mirbase.org/ftp/CURRENT/hairpin.fa.gz
+
 
 
 
