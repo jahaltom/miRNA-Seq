@@ -56,7 +56,7 @@ rule Count_Table:
             #Read in miRNAs_expressed_all_samples_{sample}.csv 
             quant_df=pd.read_csv(path+"miRNAs_expressed_all_samples_"+raid+".csv",sep="\t")  
             # Get #miRNA  and precursor IDs from miRNAs_expressed_all_samples_{sample}.csv
-            if x=0:                
+            if x==0:                
                 countTable=quant_df[["#miRNA","precursor"]]
                 x=1
              # Extract counts then add to table.               
