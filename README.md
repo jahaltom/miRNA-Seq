@@ -1,7 +1,8 @@
 # miRNA-Seq
 
-**Activate conda enviroment:**
+**Create and activate conda enviroment:**
 ```
+conda env create -f environment.yaml
 conda activate miRNA-Seq
 ```
 
