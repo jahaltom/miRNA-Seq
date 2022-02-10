@@ -16,8 +16,7 @@ trim_galore=qc.Trimgalore(threads=4)
 #Read in run accession IDs from txt file.
 with open ("RAids.txt") as f:
     ra=f.read().splitlines()
-##miRNA  and precursor IDs from miRNAs_expressed_all_samples_{sample}.csv
-countTable=pd.read_csv("info",sep="\t")  
+
 
 rule all:
         input: "countTable.tsv"
@@ -52,8 +51,11 @@ rule Count_Table:
     output:
         "countTable.tsv"
     run: 
+        
+        ##miRNA  and precursor IDs from miRNAs_expressed_all_samples_{sample}.csv
+        countTable=pd.read_csv("info",sep="\t")  
         for qf in input:
-            raid=str({input}).split("/")[1]  
+            raid=qf.split('/')[1] 
             path=DIR+"/"+raid + "/"        
             #Read in miRNAs_expressed_all_samples_{sample}.csv and extract counts then add to table.
             quant_df=pd.read_csv(path+"miRNAs_expressed_all_samples_"+raid+".csv",sep="\t")  
