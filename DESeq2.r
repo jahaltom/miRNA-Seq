@@ -26,4 +26,4 @@ result = result[complete.cases(result),]
 result = cbind(GeneID = rownames(result), result)
 
 
-write.table(result,"VitaminD3_DGE.txt" ,sep = '\t',row.names = FALSE)
+write.table(result,"VitaminD3_DGE.tsv" ,sep = '\t',row.names = FALSE)
