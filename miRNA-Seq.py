@@ -1,6 +1,7 @@
 from pyrpipe import sra,qc
 import glob
 import pandas as pd
+from pandas import DataFrame
 
 
 
@@ -58,12 +59,10 @@ rule Count_Table:
             # Get #miRNA  and precursor IDs from miRNAs_expressed_all_samples_{sample}.csv
             if x==0:                
                 countTable=quant_df[["#miRNA","precursor"]]
-                countTable = countTable.rename(columns={'#miRNA': 'miRNA'})
+                countTable = countTable.rename(columns={'#miRNA': 'miRNA'})                                                     
                 x=1
              # Extract counts then add to table.               
             countTable[raid]=quant_df[raid[-3:]]
+        #Mature miRNA's can have more than 1 precursor. For this type of mature miRNA, this takes the average across precursors. 
+        countTable = countTable.groupby(['miRNA'],as_index = False).mean()  
         countTable.to_csv("countTable.tsv",mode="w", header=True,index=False,sep="\t")
-        
-        
-        
-        
