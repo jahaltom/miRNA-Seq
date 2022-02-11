@@ -1,7 +1,7 @@
 Run	Isolate	Sample Name	sex	tissue
-SRR9157691	"Endothelial progenitor cells\,Vitamin D3\,rep3"	case_12	male	bone marrow
-SRR9157693	"Endothelial progenitor cells\,Vitamin D3\,rep1"	case_10	male	bone marrow
-SRR9157695	"Endothelial progenitor cells\,rep2"	control_5	male	bone marrow
-SRR9157690	"Endothelial progenitor cells\,Vitamin D3\,rep2"	case_11	male	bone marrow
-SRR9157692	"Endothelial progenitor cells\,rep3"	control_6	male	bone marrow
-SRR9157694	"Endothelial progenitor cells\,rep1"	control_4	male	bone marrow
+SRR9157691	"Endothelial progenitor cells\,Vitamin D3\,rep3"	case	male	bone marrow
+SRR9157693	"Endothelial progenitor cells\,Vitamin D3\,rep1"	case	male	bone marrow
+SRR9157695	"Endothelial progenitor cells\,rep2"	control	male	bone marrow
+SRR9157690	"Endothelial progenitor cells\,Vitamin D3\,rep2"	case	male	bone marrow
+SRR9157692	"Endothelial progenitor cells\,rep3"	control	male	bone marrow
+SRR9157694	"Endothelial progenitor cells\,rep1"	control	male	bone marrow
