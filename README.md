@@ -18,16 +18,6 @@ wget https://www.mirbase.org/ftp/CURRENT/hairpin.fa.gz
 gunzip *gz*
 ```
 
-**Create RAids.txt**
-```
-SRR9157691
-SRR9157693
-SRR9157695
-SRR9157690
-SRR9157692
-SRR9157694
-```
-
 
 **Run miRNA-Seq quantification analysis**
 ```
