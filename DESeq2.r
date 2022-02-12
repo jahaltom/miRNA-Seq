@@ -18,7 +18,7 @@ samples=row.names(metadata)
 ##Make DEseq2 object 
 dds = DESeqDataSetFromMatrix(countData = countData,colData = metadata,design = ~ Sample.Name)   
 dds = DESeq(dds)
-#Contrast SARS-CoV-2 vs Mock
+#Contrast case vs control
 result = results(dds, contrast=c("Sample.Name","case","control"))
 ## Remove rows with NA
 result = result[complete.cases(result),]
