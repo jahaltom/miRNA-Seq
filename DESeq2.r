@@ -16,10 +16,10 @@ samples=row.names(metadata)
 #all(rownames(metadata) == colnames(countData))
 
 ##Make DEseq2 object 
-dds = DESeqDataSetFromMatrix(countData = countData,colData = metadata,design = ~ Sample.Name)   
+dds = DESeqDataSetFromMatrix(countData = countData,colData = metadata,design = ~ Sample)   
 dds = DESeq(dds)
 #Contrast case vs control
-result = results(dds, contrast=c("Sample.Name","case","control"))
+result = results(dds, contrast=c("Sample","case","control"))
 ## Remove rows with NA
 result = result[complete.cases(result),]
 #Put GeneID as column 
