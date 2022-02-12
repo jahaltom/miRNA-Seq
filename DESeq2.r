@@ -26,4 +26,4 @@ result = result[complete.cases(result),]
 result = cbind(miRNA_ID = rownames(result), result)
 
 
-write.table(result,"VitaminD3_DGE.tsv" ,sep = '\t',row.names = FALSE)
+write.table(result,"CaseVSControl_DGE.tsv" ,sep = '\t',row.names = FALSE)
