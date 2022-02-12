@@ -33,7 +33,7 @@ snakemake -j 6 -s miRNA-Seq.py --cluster "sbatch -t 02:00:00  -c 30 -p RM-shared
 This generates a tsv file for the DESeq2 results, in this case its "VitaminD3_DGE.tsv". 
 
 ```
-rscript DESeq2.r
+Rscript DESeq2.r
 ```
 
 
