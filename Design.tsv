@@ -1,4 +1,4 @@
-Run	Isolate	Sample Name	sex	tissue
+Run	Isolate	Sample	sex	tissue
 SRR9157691	"Endothelial progenitor cells\,Vitamin D3\,rep3"	case	male	bone marrow
 SRR9157693	"Endothelial progenitor cells\,Vitamin D3\,rep1"	case	male	bone marrow
 SRR9157695	"Endothelial progenitor cells\,rep2"	control	male	bone marrow
