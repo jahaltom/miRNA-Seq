@@ -23,7 +23,7 @@ result = results(dds, contrast=c("Sample.Name","case","control"))
 ## Remove rows with NA
 result = result[complete.cases(result),]
 #Put GeneID as column 
-result = cbind(GeneID = rownames(result), result)
+result = cbind(miRNA_ID = rownames(result), result)
 
 
 write.table(result,"VitaminD3_DGE.tsv" ,sep = '\t',row.names = FALSE)
