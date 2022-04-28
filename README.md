@@ -36,4 +36,7 @@ This generates a tsv file for the DESeq2 results, in this case its "CaseVSContro
 Rscript DESeq2.r
 ```
 
+**Human**
+miRNA-Seq_Human.py will quantify transcripts against the human miRNA reference.
+
 
