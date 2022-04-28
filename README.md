@@ -23,6 +23,8 @@ gunzip *gz*
 
 **Run miRNA-Seq quantification analysis**
 This generates "countTable.tsv" which is used as count input for DESeq2.
+miRNA-Seq.py will quantify transcripts using the Rattus norvegicus miRNA reference. 
+miRNA-Seq_Human.py will quantify transcripts using the human miRNA reference.
 
 ```
 snakemake -j 6 -s miRNA-Seq.py --cluster "sbatch -t 02:00:00  -c 30 -p RM-shared"
@@ -35,8 +37,5 @@ This generates a tsv file for the DESeq2 results, in this case its "CaseVSContro
 ```
 Rscript DESeq2.r
 ```
-
-**Human**
-miRNA-Seq_Human.py will quantify transcripts against the human miRNA reference.
 
 
